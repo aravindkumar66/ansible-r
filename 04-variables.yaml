@@ -9,12 +9,12 @@
       ansible.builtin.debug:
         msg: "The course is: {{COURSE}}, Duration is: {{DURATION}}, Trainer is: {{TRAINER}}}"
 
+  vars:
+    COURSE: Ansible
   tasks:
-    vars:
-      COURSE: Ansible
-      - name: print the variables
-        ansible.builtin.debug:
-          msg: "The course is: {{COURSE}}, Duration is: {{DURATION}}, Trainer is: {{TRAINER}}}"
+    - name: print the variables
+      ansible.builtin.debug:
+        msg: "The course is: {{COURSE}}, Duration is: {{DURATION}}, Trainer is: {{TRAINER}}}"
 
   tasks:
     - name: print the variables
