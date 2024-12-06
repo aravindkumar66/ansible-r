@@ -3,4 +3,4 @@
   tasks:
   - name: play 01 task 01
     ansible.builtin.debug:
-    msg: "Hi, Aravindh write a ansible yaml file"
+      msg: "Hi, Aravindh write a ansible yaml file"
