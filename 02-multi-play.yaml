@@ -4,3 +4,10 @@
   - name: play 01 task 01
     ansible.builtin.debug:
       msg: "Hi, Aravindh write a ansible yaml file"
+
+- name: play 02
+  hosts: web
+  tasks:
+  - name: play 02 task 01
+    ansible.builtin.debug:
+      msg: "Hi, Aravindh write a multi play yaml file"
