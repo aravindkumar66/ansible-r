@@ -1,6 +1,12 @@
 - name: take vairables from prompt
   hosts: web
   vars_prompt:
+    - name: COURSE
+      prompt: enter the course name
+    - name: DURATION
+      prompt: enter the duration name
+    - name: TRAINER
+      prompt: enter the trainer name
   tasks: 
     - name: print variables from prompt
       ansible.builtin.debug:
