@@ -2,9 +2,9 @@
   hosts: local
   connection: local
   vars: 
-    subnet id: subnet-0fa1ef45d6ebb9c04
-    sg id: sg-0a1c366ef24b32703
-    instant type: t2.micro
+    subnetid: subnet-0fa1ef45d6ebb9c04
+    sgid: sg-0a1c366ef24b32703
+    instanttype: t2.micro
     image: ami-09c813fb71547fc4f
     instances:
       - mysql
@@ -14,9 +14,9 @@
     - name: create ec2 instance
       amazon.aws.ec2_instance:
         name: "{{item}}"
-        vpc_subnet_id: "{{subnet id}}"
-        instance_type: "{{instant type}}"
-        security_group: "{{sg id}}"
+        vpc_subnet_id: "{{subnetid}}"
+        instance_type: "{{instanttype}}"
+        security_group: "{{sgid}}"
         image_id: "{{image}}"
       loop: "{{instances}}"
       register: ec2_instance
