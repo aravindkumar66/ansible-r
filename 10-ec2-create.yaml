@@ -3,9 +3,9 @@
   connection: local
   vars: 
     subnetid: subnet-0fa1ef45d6ebb9c04
-    sgid: sg-0a1c366ef24b32703
-    instanttype: t2.micro
-    image: ami-09c813fb71547fc4f
+    sgid: "sg-0a1c366ef24b32703"
+    instanttype: "t2.micro"
+    image: "ami-09c813fb71547fc4f"
     instances:
       - mysql
       - backend
@@ -19,4 +19,4 @@
         security_group: "{{sgid}}"
         image_id: "{{image}}"
       loop: "{{instances}}"
-      register: ec2_instance
+      register: ec2_instances
