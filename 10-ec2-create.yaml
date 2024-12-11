@@ -7,9 +7,9 @@
     instanttype: "t2.micro"
     image: "ami-09c813fb71547fc4f"
     instances:
-      - mysql
-      - backend
-      - frontend
+    - mysql
+    - backend
+    - frontend
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
